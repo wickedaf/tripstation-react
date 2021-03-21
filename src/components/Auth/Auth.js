@@ -40,7 +40,6 @@ const Auth = () => {
     const onSubmit = (data) => {
 
         if(newUser && data.email && data.password){
-            console.log(newUser);
             firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
             .then( userCredential => {
                 const newUserInfo = userCredential.user;

@@ -1,6 +1,6 @@
 # Tripstation React
 **Live Link**
-[https://tripstation-react.firebase.app](https://tripstation-react.firebase.app)
+[https://tripstation-react.web.app/](https://tripstation-react.web.app/)
 
 ** Features**
  - Authentication (Auth Guard)
