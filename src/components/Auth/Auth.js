@@ -53,6 +53,7 @@ const Auth = () => {
                 const newUserInfo = {};
                 newUserInfo.error = error.message;
                 newUserInfo.success = false;
+                setUser(newUserInfo);
 
             });
         }
@@ -68,9 +69,10 @@ const Auth = () => {
                 handleResponse(user, true);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
+                const newUserInfo = {};
+                newUserInfo.error = error.message;
+                newUserInfo.success = false;
+                setUser(newUserInfo);
             });
         }
 
@@ -94,9 +96,10 @@ const Auth = () => {
             handleResponse(signedInUser, true);
         }).catch((error) => {
             // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
+            const newUserInfo = {};
+            newUserInfo.error = error.message;
+            newUserInfo.success = false;
+            setUser(newUserInfo);
          });
 
     };
@@ -116,9 +119,10 @@ const Auth = () => {
             handleResponse(signedInUser, true);
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
+            const newUserInfo = {};
+            newUserInfo.error = error.message;
+            newUserInfo.success = false;
+            setUser(newUserInfo);
         });
     };
 
@@ -146,6 +150,7 @@ const Auth = () => {
                 <br/>
             </div>
                  { user.success && <p style={{color: 'green', textAlign: 'center'}}>User {user.email} logged in successfully</p>}
+                 { user.error && <p style={{color: 'red', textAlign: 'center', paddingTop: '5px'}}>{user.error}</p>}
             <hr className="w-100"/>
            <div className="row w-75 mx-auto px-5">
                 <div className="col">
