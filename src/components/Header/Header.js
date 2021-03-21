@@ -17,8 +17,8 @@ const Header = () => {
                         <Link className="px-4 link-style" to="/trip-type/destination">Destination</Link>
                         <Link className="px-4 link-style" to="#link">Blog</Link>
                         <Link className="px-4 link-style" to="#link">Contact</Link>
-                        { loggedInUser 
-                            ? <Button variant="danger"><Link style={{ textDecoration: 'none', color: 'white' }} to="/login">Logout</Link></Button>
+                        { loggedInUser.success 
+                            ? <Button variant="danger"><Link style={{ textDecoration: 'none', color: 'white' }} onClick={() => setLoggedInUser({})}>Logout</Link></Button>
                             : <Button variant="danger"><Link style={{ textDecoration: 'none', color: 'white' }} to="/login">Login</Link></Button>
                         }
                         

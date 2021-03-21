@@ -4,3 +4,13 @@
         margin-left: -120px;
     }
   }
+.google-btn img, .fb-btn img{
+  width: 5%;
+  margin-right: 6px;
+  
+}
+
+.google-btn, .fb-btn{
+  display: flex;
+  align-items: center;
+}
