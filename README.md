@@ -1,6 +1,9 @@
 # Tripstation React
-**Live Link**
+**Firebase Live Link**
 [https://tripstation-react.web.app/](https://tripstation-react.web.app/)
+
+**Netlify Live Link**
+[https://tripstation-react.netlify.app/](https://tripstation-react.netlify.app/)
 
 ** Features**
  - Authentication (Auth Guard)
