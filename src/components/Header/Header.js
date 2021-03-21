@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Header.css';
 
@@ -15,10 +15,13 @@ const Header = () => {
                     <Nav>
                         <Link className="px-4 link-style"  to="/home">Home</Link>
                         <Link className="px-4 link-style" to="/trip-type/destination">Destination</Link>
-                        <Link className="px-4 link-style" to="#link">Blog</Link>
-                        <Link className="px-4 link-style" to="#link">Contact</Link>
+                        <Link className="px-4 link-style" to="/">Blog</Link>
+                        <Link className="px-4 link-style" to="/">Contact</Link>
                         { loggedInUser.success 
-                            ? <Button variant="danger"><Link style={{ textDecoration: 'none', color: 'white' }} onClick={() => setLoggedInUser({})}>Logout</Link></Button>
+                            ? <Button variant="danger"><Link style={{ textDecoration: 'none', color: 'white' }} onClick={() => {
+                                setLoggedInUser({});
+                                <Redirect to={{pathname: "/login"}}/>
+                            }}>Logout</Link></Button>
                             : <Button variant="danger"><Link style={{ textDecoration: 'none', color: 'white' }} to="/login">Login</Link></Button>
                         }
                         
