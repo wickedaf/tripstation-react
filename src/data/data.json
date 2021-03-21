@@ -1,0 +1,17 @@
+[{
+    "id": 1,
+    "name": "Bike",
+    "img": "https://i.imgur.com/ActTmph.png"
+  }, {
+    "id": 2,
+    "name": "Car",
+    "img": "https://i.imgur.com/Szxg9ne.png"
+  }, {
+    "id": 3,
+    "name": "Bus",
+    "img": "https://i.imgur.com/593Dzr3.png"
+  }, {
+    "id": 4,
+    "name": "Train",
+    "img": "https://i.imgur.com/8RfmW0U.png"
+  }]

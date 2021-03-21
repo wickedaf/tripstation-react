@@ -1,0 +1,19 @@
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 1px;
+    background: #fff;
+
+  }
+   
+  .timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: inherit;
+  }
